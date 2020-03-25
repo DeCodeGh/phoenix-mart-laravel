@@ -18,4 +18,5 @@
             @yield('content')
         </div>
     </body>
+    @include('templates.partials._footer')
 </html>
