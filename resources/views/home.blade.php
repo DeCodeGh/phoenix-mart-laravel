@@ -41,7 +41,7 @@ background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/s
             <img src="https://images.unsplash.com/photo-1541717782351-e9acfdc4f0ab?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60" alt="" class="mt-4 mb-4">
 
             <div class="md:flex justify-center py-4 ">
-            <button class="border-2 block antialiased text-center  bg-black text-white hover:bg-white hover:text-black w-64 px-4 py-2 ml-2 mr-2 font-bold text-xl">shop women's clothing</button>
+            <button class="border-2 block text-center antialiased border-white bg-black text-white hover:bg-white hover:border-black hover:text-black w-64 px-4 py-2 ml-2 mr-2 font-bold text-xl">shop women's clothing</button>
 
             </div>
         </div>
@@ -49,7 +49,7 @@ background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/s
         <div class="w-full md:1/3">
             <img src="https://images.unsplash.com/photo-1555379136-43000445f585?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60" alt="" class="mt-4 mb-4">
             <div class="md:flex justify-center py-4">
-            <button class="border-2 block antialiased  bg-black text-white hover:bg-white hover:text-black w-64 px-4 py-2 ml-2 mr-2 font-bold text-xl">shop kid's clothing</button>
+            <button class="border-2 block text-center antialiased border-white bg-black text-white hover:bg-white hover:border-black hover:text-black w-64 px-4 py-2 ml-2 mr-2 font-bold text-xl">shop kid's clothing</button>
 
             </div>
         </div>
