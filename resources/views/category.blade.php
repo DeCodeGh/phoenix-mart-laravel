@@ -32,17 +32,58 @@
             </div>
 
             <div class="flex-1">
-                <div class="md:flex px-2">
-                    <div class="md:w-1/3 border border-black mr-2 px-2 py-2 mb-4">
-                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sit tenetur nobis assumenda iure magni accusantium exercitationem atque corporis sint quo!
+                <div class="flex flex-wrap -mx-2">
+                    <div class="md:w-1/3 px-2 mb-4">
+                    <div class=" border border-black">
+                            <img src="https://images.unsplash.com/photo-1541717782351-e9acfdc4f0ab?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60" alt="" class=" mb-4">
+
+                        <div class="md:flex justify-center py-4 ">
+                        <button class="border-2 block text-center antialiased border-white bg-black text-white hover:bg-white hover:border-black hover:text-black w-64 px-4 py-2 ml-2 mr-2 font-bold text-xl uppercase">Buy</button>
+                        </div>
+                    </div>
                     </div>
 
-                    <div class="md:w-1/3 border border-black mr-2 px-2 py-2 mb-4">
-                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sit tenetur nobis assumenda iure magni accusantium exercitationem atque corporis sint quo!
+                    <div class="md:w-1/3  px-2 mb-4">
+                         <div class=" border border-black">
+                            <img src="https://images.unsplash.com/photo-1541717782351-e9acfdc4f0ab?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60" alt="" class=" mb-4">
+
+                        <div class="md:flex justify-center py-4 ">
+                        <button class="border-2 block text-center antialiased border-white bg-black text-white hover:bg-white hover:border-black hover:text-black w-64 px-4 py-2 ml-2 mr-2 font-bold text-xl uppercase">Buy</button>
+                        </div>
                     </div>
-                    <div class="md:w-1/3 border border-black mr-2 px-2 py-2 mb-4">
-                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sit tenetur nobis assumenda iure magni accusantium exercitationem atque corporis sint quo!
                     </div>
+
+                    <div class="md:w-1/3  px-2 mb-4">
+                        <div class=" border border-black">
+                            <img src="https://images.unsplash.com/photo-1541717782351-e9acfdc4f0ab?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60" alt="" class=" mb-4">
+
+                        <div class="md:flex justify-center py-4 ">
+                        <button class="border-2 block text-center antialiased border-white bg-black text-white hover:bg-white hover:border-black hover:text-black w-64 px-4 py-2 ml-2 mr-2 font-bold text-xl uppercase">Buy</button>
+                        </div>
+                    </div>
+                    </div>
+
+                      <div class="md:w-1/3  px-2 mb-4">
+                        <div class=" border border-black">
+                            <img src="https://images.unsplash.com/photo-1541717782351-e9acfdc4f0ab?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60" alt="" class=" mb-4">
+
+                        <div class="md:flex justify-center py-4 ">
+                        <button class="border-2 block text-center antialiased border-white bg-black text-white hover:bg-white hover:border-black hover:text-black w-64 px-4 py-2 ml-2 mr-2 font-bold text-xl uppercase">Buy</button>
+                        </div>
+                    </div>
+                    </div>
+
+                    <div class="md:w-1/3  px-2 mb-4">
+                        <div class=" border border-black">
+                            <img src="https://images.unsplash.com/photo-1541717782351-e9acfdc4f0ab?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60" alt="" class=" mb-4">
+
+                        <div class="md:flex justify-center py-4 ">
+                        <button class="border-2 block text-center antialiased border-white bg-black text-white hover:bg-white hover:border-black hover:text-black w-64 px-4 py-2 ml-2 mr-2 font-bold text-xl uppercase">Buy</button>
+                        </div>
+                    </div>
+                    </div>
+
+
                 </div>
             </div>
         </div>
