@@ -17,6 +17,6 @@
         <div id="app">
             @yield('content')
         </div>
+        @include('templates.partials._footer')
     </body>
-    @include('templates.partials._footer')
 </html>

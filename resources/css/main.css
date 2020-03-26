@@ -3,3 +3,12 @@
 @tailwind components;
 
 @tailwind utilities;
+
+body{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+#app{
+flex-grow: 1;
+}
