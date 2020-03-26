@@ -13,7 +13,7 @@
         <link rel="stylesheet" href="css/main.css">
 
     </head>
-    <body class="">
+    <body class="overflow-x-hidden">
         <div id="app">
             @yield('content')
         </div>

@@ -27,8 +27,20 @@
 
     <div class="w-full">
         <div class="md:flex flex-wrap">
-            <div class="w-full md:w-64">
+            <div class="w-full md:w-64 px-4">
+                <div class="border border-black px-2 h-auto mb-2">
 
+                <header class="font-bold text-4xl">
+                    Women
+                </header>
+                <header class="font-bold text-2xl uppercase">shoes</header>
+                <header class="font-bold text-2xl uppercase">accessories</header>
+                <header class="font-bold text-2xl uppercase">sports</header>
+                <header class="font-bold text-2xl uppercase">sale</header>
+
+
+
+                </div>
             </div>
 
             <div class="flex-1">
