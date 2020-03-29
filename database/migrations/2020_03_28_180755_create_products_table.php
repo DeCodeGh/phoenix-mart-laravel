@@ -14,8 +14,14 @@ class CreateProductsTable extends Migration
     public function up()
     {
         Schema::create('products', function (Blueprint $table) {
-            $table->id();
+            $table->uuid('id')->nullable()->default(null);
+            $table->string('name');
+            $table->string('category');
+            $table->double('price', 5, 2)->nullable()->default(123.45);
+            $table->integer('stock')->unsigned()->nullable();
+            $table->boolean('in_stock')->nullable()->default(false);
             $table->timestamps();
+            $table->primary('id');
         });
     }
 
