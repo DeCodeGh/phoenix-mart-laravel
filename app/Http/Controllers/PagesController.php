@@ -15,4 +15,9 @@ class PagesController extends Controller
     {
         return view('category');
     }
+
+    public function dashboard()
+    {
+        return view('admin.index');
+    }
 }
