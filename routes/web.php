@@ -22,3 +22,7 @@ Route::get('/product', 'ProductController@show')->name('product.single');
 Route::group(['prefix' => 'admin'], function () {
     Route::get('/', 'PagesController@dashboard')->name('dashboad');
 });
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
