@@ -1,7 +1,7 @@
 @extends('templates.app')
 
 @section('content')
-    @include('templates.partials._global-navigation')
+
 <div id="hero" class="w-full flex mb-4">
 
         <div class="w-full  flex-shrink-0 md:w-1/3 px-2 bg-black text-white py-4">
