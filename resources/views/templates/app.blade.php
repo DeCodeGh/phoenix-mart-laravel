@@ -14,6 +14,7 @@
 
     </head>
     <body class="overflow-x-hidden">
+       @include('templates.partials._global-navigation')
         <div id="app">
             @yield('content')
         </div>
