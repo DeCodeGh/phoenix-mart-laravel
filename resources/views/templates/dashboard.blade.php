@@ -11,7 +11,7 @@
                   <a href="" class="ml-4">Passwords</a>
 
                   <header class="text-2xl font-bold">Products</header>
-                  <a href="" class="ml-4">Products</a>
+               <a href="{{route('product.index')}}" class="ml-4">Products</a>
                   <a href=""></a>
                   <a href=""></a>
 
@@ -22,7 +22,7 @@
                </div>
             </div>
 
-            <div class="flex-1 px-4">
+            <div class=" md:mx-4 flex-1 px-4">
               @yield('dashboard-content')
             </div>
         </div>

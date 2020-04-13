@@ -10,10 +10,11 @@
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
 
         <!-- Styles -->
-        <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="{{asset('css/main.css') }}">
 
     </head>
     <body class="overflow-x-hidden">
+       @include('templates.partials._global-navigation')
         <div id="app">
             @yield('content')
         </div>
