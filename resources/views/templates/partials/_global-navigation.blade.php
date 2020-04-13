@@ -12,10 +12,9 @@
 
           <div class="">
             @auth
-              <a href="" class="text-gray-400 hover:text-white px-2">User</a>
-            Logout
+          <a href="{{route('dashboard')}}" class="text-gray-400 hover:text-white px-2">User</a>
               <a class="text-gray-400 hover:text-white px-2" href="{{ route('logout') }}" onclick="event.preventDefault();document.getElementById('logout-form').submit();">
-                                        <span class=" -md-log-out"></span>&nbsp;{{ __('Logout') }}
+                                        <span class=" -md-log-out"></span>&nbsp;Logout
                                     </a>
                                       <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                                         @csrf

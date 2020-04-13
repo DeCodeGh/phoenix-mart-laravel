@@ -20,7 +20,23 @@ Route::get('/product', 'ProductController@show')->name('product.single');
 
 
 Route::group(['prefix' => 'admin'], function () {
-  Route::get('/', 'PagesController@dashboard')->name('dashboad');
+  Route::get('/', 'PagesController@dashboard')->name('dashboard');
+  // categories
+  Route::get('categories', 'CategoryController@index')->name('category.index');
+
+  Route::group(['prefix' => 'category'], function () {
+
+    // add new category
+    Route::get('new', 'CategoryController@create')->name('category.create');
+    Route::post('new', 'CategoryController@store')->name('category.store');
+
+    // editing category
+    Route::get('edit/{category}', 'CategoryController@edit')->name('category.edit');
+    Route::patch('update/{category}', 'CategoryController@update')->name('category.update');
+
+    //delete category
+    Route::delete('delete/{category}', 'CategoryController@destroy')->name('category.delete');
+  });
 });
 
 Auth::routes();

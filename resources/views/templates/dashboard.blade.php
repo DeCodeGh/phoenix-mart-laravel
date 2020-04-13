@@ -22,7 +22,7 @@
                </div>
             </div>
 
-            <div class="flex-1 px-4">
+            <div class=" md:mx-4 flex-1 px-4">
               @yield('dashboard-content')
             </div>
         </div>
