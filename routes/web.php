@@ -20,7 +20,7 @@ Route::get('/product', 'ProductController@show')->name('product.single');
 
 
 Route::group(['prefix' => 'admin'], function () {
-    Route::get('/', 'PagesController@dashboard')->name('dashboad');
+  Route::get('/', 'PagesController@dashboard')->name('dashboad');
 });
 
 Auth::routes();

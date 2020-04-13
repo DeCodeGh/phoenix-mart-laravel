@@ -1,7 +1,6 @@
 @extends('templates.app')
 
 @section('content')
-@include('templates.partials._global-navigation')
 <div class="w-full">
     <div class="w-full">
         <div class="flex px-4">
