@@ -15,8 +15,13 @@
           </div>
 
           <div class="w-full mt-4">
-           <label class="block">Category ID</label>
-           <input type="text" name="category" id="" class="mt-4" placeholder="product name">
+           <label class="block">Category</label>
+           <select name="category" class="mt-4 w-full">
+             <option value="" default>Select One</option>
+             @foreach($categories as $category)
+           <option value="{{$category->name}}" default>{{$category->name}}</option>
+           @endforeach
+           </select>
          </div>
            <div class="w-full mt-4">
             <label class="block">price</label>
@@ -37,6 +42,13 @@
               <input type="radio" class="" name="in_stock" value=1 >
               <label for="  " class="form-check-label">no</label>
               </div>
+          </div>
+
+          <div class="w-full mt-4">
+            <label for="" class="text-gray-600 block font-bold">Description</label>
+            <textarea name="description" cols="30" rows="5">
+
+            </textarea>
           </div>
 
           <div class="w-full mt-4">

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Product;
+use App\Models\Category;
 use Illuminate\Http\Request;
 
 class ProductController extends Controller
@@ -23,9 +24,10 @@ class ProductController extends Controller
    *
    * @return \Illuminate\Http\Response
    */
-  public function create()
+  public function create(Category $category)
   {
-    return view('admin.product.create');
+    $categories = Category::all();
+    return view('admin.product.create', compact('categories'));
   }
 
   /**
@@ -36,6 +38,7 @@ class ProductController extends Controller
    */
   public function store(Request $request)
   {
+
     $product = new Product;
     $product->id = $request->input('id');
     $product->name = $request->input('name');
@@ -43,6 +46,7 @@ class ProductController extends Controller
     $product->price = $request->input('price');
     $product->stock = $request->input('stock');
     $product->in_stock = $request->input('in_stock');
+    $product->description = $request->input('description');
 
     $product->save();
     return redirect()->route('product.index');
@@ -56,7 +60,8 @@ class ProductController extends Controller
    */
   public function show(Product $product)
   {
-    return view('product');
+    $product = Product::find($product)->first();
+    return view('product', compact('product'));
   }
 
   /**
@@ -65,11 +70,11 @@ class ProductController extends Controller
    * @param  int  $id
    * @return \Illuminate\Http\Response
    */
-  public function edit(Product $product)
+  public function edit(Product $product, Category $categories)
   {
     $product =  Product::find($product)->first();
-
-    return view('admin.product.edit', compact('product'));
+    $categories = Category::all();
+    return view('admin.product.edit', compact('product', 'categories'));
   }
 
   /**
@@ -81,10 +86,15 @@ class ProductController extends Controller
    */
   public function update(Request $request, Product $product)
   {
+    $categories = Category::all();
     $product =  Product::find($product)->first();
     $product->id = $request->get('id');
     $product->name = $request->get('name');
-
+    $product->category = $request->get('category');
+    $product->price = $request->get('price');
+    $product->stock = $request->get('stock');
+    $product->in_stock = $request->get('in_stock');
+    $product->description = $request->get('description');
     $product->save();
     return redirect()->route('product.index');
   }

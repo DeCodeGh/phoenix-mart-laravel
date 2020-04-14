@@ -1,7 +1,5 @@
 @extends('templates.app')
 @section('content')
-    @include('templates.partials._global-navigation')
-
     <div class="w-full px-2">
         <div class="flex flex-wrap">
             <div class="md:w-4/6 flex flex-wrap px-4 py-6 -mx-2">
@@ -27,29 +25,28 @@
             <div class="flex-1  px-1 py-6">
                 <div class="flex flex-wrap justify-between text-base">
                     <div class="text-4xl font-bold">
-                        Lorem, ipsum dolor.
+                       {{$product->name}}
                     </div>
-                    <div class="text-4xl font-bold"> 234 $</div>
+                    <div class="text-4xl font-bold"> {{$product->price}} $</div>
                 </div>
 
                 <div>
                     <p class="mb-4">
-                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cupiditate dicta, quidem ipsam consequatur laboriosam doloremque consectetur earum eum est, animi impedit officiis? Blanditiis id quisquam numquam possimus exercitationem hic laborum eius rem cupiditate quae libero delectus mollitia unde, quas quos?
+                        {{$product->description}}
                     </p>
-
-                    <p class="mb-4">
-                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cupiditate dicta, quidem ipsam consequatur laboriosam doloremque consectetur earum eum est, animi impedit officiis? Blanditiis id quisquam numquam possimus exercitationem hic laborum eius rem cupiditate quae libero delectus mollitia unde, quas quos?
-                    </p>
+                </div>
+                <div>
+                  <button type="submit" class="bg-black px-2 py-2 uppercase text-white font-extrabold border-2 border-black hover:bg-white hover:text-black ">buy</button>
                 </div>
             </div>
         </div>
 
 
-        <div class="w-full md:w-5/6 px-4 py-6 mx-auto">
+        {{-- <div class="w-full md:w-5/6 px-4 py-6 mx-auto">
             <h2 class="text-4xl mb-4 font-extrabold">Product Story</h2>
             <p>
                 Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laboriosam assumenda officiis eaque enim, saepe beatae culpa, ducimus distinctio adipisci iure dolores dicta sed. Repudiandae, voluptate! Dolor, natus non rem quibusdam laudantium qui laboriosam. Facere cum autem deserunt praesentium excepturi veritatis.
             </p>
-        </div>
+        </div> --}}
     </div>
 @endsection
