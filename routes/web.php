@@ -14,9 +14,9 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', 'PagesController@home')->name('home');
-Route::get('/category', 'PagesController@category')->name('category');
-Route::get('/products', 'ProductController@index')->name('products');
-Route::get('/product', 'ProductController@show')->name('product.single');
+Route::get('/category/{category}', 'PagesController@category')->name('category');
+Route::get('/products', 'PagesController@products')->name('products');
+Route::get('/product/{product}', 'ProductController@show')->name('product.view');
 
 
 Route::group(['prefix' => 'admin', 'middleware' => ['auth']], function () {
@@ -47,6 +47,7 @@ Route::group(['prefix' => 'admin', 'middleware' => ['auth']], function () {
 
     // editing product
     Route::get('edit/{product}', 'productController@edit')->name('product.edit');
+
     Route::patch('update/{product}', 'productController@update')->name('product.update');
 
     //delete product

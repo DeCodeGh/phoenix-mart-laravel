@@ -1,8 +1,8 @@
 @extends('templates.dashboard')
 @section('dashboard-content')
-< class="flex justify-center py-10">
+<section class="flex justify-center py-10">
   <form action="{{route('product.update',$product->id)}}" method="post" class="">
-    @csrf
+    @csrf @method('patch')
     <h3 class="text-3xl capitalize w-full">Edit</h3>
         <div>
           <div class="w-full mt-4">
@@ -16,9 +16,14 @@
           </div>
 
           <div class="w-full mt-4">
-            <label class="block">Category name</label>
-            <input type="text" name="name" id="" class="mt-4" placeholder="product name"  value="{{$product->name}}">
-          </div>
+           <label class="block">Category</label>
+           <select name="category" class="mt-4 w-full">
+             <option value="" default>Select One</option>
+             @foreach($categories as $category)
+           <option value="{{$category->name}}" default>{{$category->name}}</option>
+           @endforeach
+           </select>
+         </div>
 
            <div class="w-full mt-4">
             <label class="block">price</label>
