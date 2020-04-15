@@ -18,6 +18,6 @@
         <div id="app">
             @yield('content')
         </div>
-        @include('templates.partials._footer')
+        <div class="mt-4">@include('templates.partials._footer')</div>
     </body>
 </html>

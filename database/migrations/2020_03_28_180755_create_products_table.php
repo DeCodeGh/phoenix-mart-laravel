@@ -17,6 +17,7 @@ class CreateProductsTable extends Migration
       $table->uuid('id')->nullable()->default(null);
       $table->string('name');
       $table->string('category');
+      $table->string('category_id');
       $table->integer('price')->unsigned()->nullable();
       $table->integer('stock')->unsigned()->nullable();
       $table->boolean('in_stock')->nullable()->default(false);
@@ -25,6 +26,7 @@ class CreateProductsTable extends Migration
       $table->string('variation')->nullable();
       $table->timestamps();
       $table->primary('id');
+      $table->foreign('category_id')->references('id')->on('categories');
     });
   }
 

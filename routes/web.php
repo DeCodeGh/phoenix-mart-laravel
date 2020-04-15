@@ -23,6 +23,7 @@ Route::group(['prefix' => 'admin', 'middleware' => ['auth']], function () {
   Route::get('/', 'PagesController@dashboard')->name('dashboard');
   // categories
   Route::get('categories', 'CategoryController@index')->name('category.index');
+  Route::get('subcategories', 'SubCategoryController@index')->name('subcategory.index');
   Route::get('products', 'ProductController@index')->name('product.index');
 
   Route::group(['prefix' => 'category'], function () {
@@ -37,6 +38,20 @@ Route::group(['prefix' => 'admin', 'middleware' => ['auth']], function () {
 
     //delete category
     Route::delete('delete/{category}', 'CategoryController@destroy')->name('category.delete');
+  });
+
+  Route::group(['prefix' => 'subcategory'], function () {
+
+    // add new category
+    Route::get('new', 'SubCategoryController@create')->name('subcategory.create');
+    Route::post('new', 'SubCategoryController@store')->name('subcategory.store');
+
+    // editing category
+    Route::get('edit/{subcategory}', 'SubCategoryController@edit')->name('subcategory.edit');
+    Route::patch('update/{subcategory}', 'SubCategoryController@update')->name('subcategory.update');
+
+    //delete category
+    Route::delete('delete/{subcategory}', 'SubCategoryController@destroy')->name('subcategory.delete');
   });
 
   Route::group(['prefix' => 'product'], function () {

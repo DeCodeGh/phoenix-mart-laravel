@@ -19,6 +19,11 @@
                   <a href="{{route('category.index')}}" class="ml-4">Categories</a>
                   <a href=""></a>
                   <a href=""></a>
+
+                   <header class="text-2xl font-bold">Sub Categories</header>
+                  <a href="{{route('subcategory.index')}}" class="ml-4">Sub Categories</a>
+                  <a href=""></a>
+                  <a href=""></a>
                </div>
             </div>
 

@@ -14,22 +14,36 @@
             <input type="text" name="name" id="" class="mt-4" placeholder="product name">
           </div>
 
-          <div class="w-full mt-4">
-           <label class="block">Category</label>
-           <select name="category" class="mt-4 w-full">
-             <option value="" default>Select One</option>
-             @foreach($categories as $category)
-           <option value="{{$category->name}}" default>{{$category->name}}</option>
+           <div class="w-full mt-4">
+            <label class="block">Category Name</label>
+            <select name="category_id" class="mt-4 w-full">
+              <option value="" default>Select One</option>
+              @foreach($categories as $category)
+          <option value="{{$category->id}}">
+            {{$category->name}}
+          </option>
            @endforeach
            </select>
-         </div>
+          </div>
+
+             <div class="w-full mt-4">
+            <label class="block">Sub Category Name</label>
+            <select name="sub_category_name" class="mt-4 w-full">
+              <option value="" default>Select One</option>
+              @foreach($subcategories as $category)
+          <option value="{{$category->name}}">
+            {{$category->name}}
+          </option>
+           @endforeach
+           </select>
+          </div>
            <div class="w-full mt-4">
             <label class="block">price</label>
-            <input type="text" name="price" id="" class="mt-4" placeholder="product name">
+            <input type="text" name="price" id="" class="mt-4" placeholder="product price">
           </div>
            <div class="w-full mt-4">
             <label class="block">stock</label>
-            <input type="text" name="stock" id="" class="mt-4" placeholder="product name">
+            <input type="text" name="stock" id="" class="mt-4" placeholder="product stock">
           </div>
            <div class="w-full mt-4">
              <label class="text-gray-600 block font-bold">In Stock</label>
@@ -40,7 +54,7 @@
 
               <div class="">
               <input type="radio" class="" name="in_stock" value=1 >
-              <label for="  " class="form-check-label">no</label>
+              <label for=" " class="form-check-label">no</label>
               </div>
           </div>
 

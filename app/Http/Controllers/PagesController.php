@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Product;
 use App\Models\Category;
+use App\models\SubCategory;
 use Illuminate\Http\Request;
 
 class PagesController extends Controller
@@ -17,8 +18,9 @@ class PagesController extends Controller
   {
 
     $products = Product::where('category', $category)->paginate(12);
-    $categories = Category::all()->whereNotNull();
-    return view('category', compact('products', 'categories'));
+    $categories = Category::all();
+    $subcategories = SubCategory::all();
+    return view('category', compact('products', 'categories', 'category'));
   }
 
   public function dashboard()
@@ -30,6 +32,8 @@ class PagesController extends Controller
   {
     $products = Product::paginate(12);
     $categories = Category::all();
+    $subcategories = SubCategory::all();
+
     return view('products', compact('products', 'categories'));
   }
 }
