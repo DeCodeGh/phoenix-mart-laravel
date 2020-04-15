@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Product;
 use App\Models\Category;
+use App\models\SubCategory;
 use Illuminate\Http\Request;
 
 class ProductController extends Controller
@@ -27,7 +28,8 @@ class ProductController extends Controller
   public function create(Category $category)
   {
     $categories = Category::all();
-    return view('admin.product.create', compact('categories'));
+    $subcategories = SubCategory::all();
+    return view('admin.product.create', compact('categories', 'subcategories'));
   }
 
   /**
@@ -42,7 +44,11 @@ class ProductController extends Controller
     $product = new Product;
     $product->id = $request->input('id');
     $product->name = $request->input('name');
-    $product->category = $request->input('category');
+    $product->category_id = $request->get('category_id');
+    $category = Category::where('id', $product->category_id)->first();
+
+    $product->sub_category = $request->get('sub_category_name');
+    $product->category = $category->name;
     $product->price = $request->input('price');
     $product->stock = $request->input('stock');
     $product->in_stock = $request->input('in_stock');
@@ -61,6 +67,7 @@ class ProductController extends Controller
   public function show(Product $product)
   {
     $product = Product::find($product)->first();
+
     return view('product', compact('product'));
   }
 
@@ -73,8 +80,10 @@ class ProductController extends Controller
   public function edit(Product $product, Category $categories)
   {
     $product =  Product::find($product)->first();
+    $subcategories = SubCategory::all();
+
     $categories = Category::all();
-    return view('admin.product.edit', compact('product', 'categories'));
+    return view('admin.product.edit', compact('product', 'categories', 'subcategories'));
   }
 
   /**
@@ -90,7 +99,11 @@ class ProductController extends Controller
     $product =  Product::find($product)->first();
     $product->id = $request->get('id');
     $product->name = $request->get('name');
-    $product->category = $request->get('category');
+    $product->category_id = $request->get('category_id');
+    $category = Category::where('id', $product->category_id)->first();
+    $product->category = $category->name;
+    $product->sub_category = $request->get('sub_category_name');
+
     $product->price = $request->get('price');
     $product->stock = $request->get('stock');
     $product->in_stock = $request->get('in_stock');

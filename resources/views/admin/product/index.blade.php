@@ -18,6 +18,7 @@
       <th class="px-4 py-2">Id</th>
       <th class="px-4 py-2">Name</th>
       <th class="px-4 py-2">Category</th>
+      <th class="px-4 py-2">Sub Category</th>
       <th class="px-4 py-2">Price</th>
       <th class="px-4 py-2">Stock</th>
       <th class="px-4 py-2">In Stock</th>
@@ -29,6 +30,7 @@
       <td>{{$product->id}}</td>
       <td>{{$product->name}}</td>
       <td>{{$product->category}}</td>
+      <td>{{$product->sub_category}}</td>
       <td>{{$product->price}}</td>
       <td>{{$product->stock}}</td>
       <td>{{$product->in_stock}}</td>

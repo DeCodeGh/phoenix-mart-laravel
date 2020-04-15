@@ -11,16 +11,16 @@
           </div>
            <div class="w-full mt-4">
             <label class="block">Name</label>
-            <input type="text" name="name" id="" class="mt-4" placeholder="category name" value="{{$sub_category->name}}">
+            <input type="text" name="name" id="" class="mt-4" placeholder="sub category name" value="{{$sub_category->name}}">
           </div>
 
               <div class="w-full mt-4">
             <label class="block">Category Name</label>
-            <select name="category" class="mt-4 w-full">
-            <option value="" default>{{$category->name}}</option>
-             @foreach($categories as $category)
-           <option value="{{$category->name}}" default>{{$category->name}}</option>
-           @endforeach
+            <select name="category_id" class="mt-4 w-full">
+            <option value="" default>{{$sub_category->category_name}}</option>
+              @foreach($categories as $category)
+                <option value="{{$category->id}}" default>{{$category->name}}</option>
+              @endforeach
            </select>
           </div>
 

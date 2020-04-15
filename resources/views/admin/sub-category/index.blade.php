@@ -8,7 +8,7 @@
   </h3>
 
   <div class="mt-4">
-  <a href="{{route('category.create')}}">Add New</a>
+  <a href="{{route('subcategory.create')}}">Add New</a>
   </div>
   <div>
 
@@ -21,14 +21,14 @@
       <th class="px-4 py-2">Actions</th>
     </thead>
     <tbody>
-      @foreach($sub_categories as $category)
+      @foreach($subcategories as $subcategory)
       <tr>
-      <td>{{$category->id}}</td>
-      <td>{{$category->name}}</td>
-      <td>{{$category->category_name}}</td>
+      <td>{{$subcategory->id}}</td>
+      <td>{{$subcategory->name}}</td>
+      <td>{{$subcategory->category_name}}</td>
         <td class="inline-flex">
-        <a href="{{route('category.edit',$category->id)}}" class="mx-2">edit</a>
-        <form class="mx-2" method="POST" action="{{route('category.delete',$category->id)}}">
+        <a href="{{route('subcategory.edit',$subcategory->id)}}" class="mx-2">edit</a>
+        <form class="mx-2" method="POST" action="{{route('subcategory.delete',$subcategory->id)}}">
           @method('delete') @csrf
           <button type="submit">delete</button>
         </form>

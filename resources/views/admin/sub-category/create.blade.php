@@ -15,10 +15,12 @@
           </div>
             <div class="w-full mt-4">
             <label class="block">Category Name</label>
-            <select name="category" class="mt-4 w-full">
-             <option value="" default>Select One</option>
-             @foreach($categories as $category)
-           <option value="{{$category->name}}" default>{{$category->name}}</option>
+            <select name="category_id" class="mt-4 w-full">
+              <option value="" default>Select One</option>
+              @foreach($categories as $category)
+          <option value="{{$category->id}}">
+            {{$category->name}}
+          </option>
            @endforeach
            </select>
           </div>

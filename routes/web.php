@@ -47,11 +47,11 @@ Route::group(['prefix' => 'admin', 'middleware' => ['auth']], function () {
     Route::post('new', 'SubCategoryController@store')->name('subcategory.store');
 
     // editing category
-    Route::get('edit/{category}', 'SubCategoryController@edit')->name('subcategory.edit');
-    Route::patch('update/{category}', 'SubCategoryController@update')->name('subcategory.update');
+    Route::get('edit/{subcategory}', 'SubCategoryController@edit')->name('subcategory.edit');
+    Route::patch('update/{subcategory}', 'SubCategoryController@update')->name('subcategory.update');
 
     //delete category
-    Route::delete('delete/{category}', 'SubCategoryController@destroy')->name('subcategory.delete');
+    Route::delete('delete/{subcategory}', 'SubCategoryController@destroy')->name('subcategory.delete');
   });
 
   Route::group(['prefix' => 'product'], function () {
