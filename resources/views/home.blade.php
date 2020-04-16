@@ -30,15 +30,17 @@ background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/s
 <div class="w-full front_cards--items mt-4">
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 px-4">
       @foreach ( $categories as $category )
+        @if($loop->index < 6 )
       <div class="">
         <img src="https://images.unsplash.com/photo-1542053254535-def95e944232?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60" alt="" class="mt-4 mb-4">
         <div class="md:flex justify-center py-4">
         <a href="{{route('category',$category->name)}}" class="border-2 block text-center antialiased border-white bg-black text-white hover:bg-white hover:border-black hover:text-black w-64 px-4 py-2 ml-2 mr-2 font-bold text-xl" >
             {{$category->name}}
           </a>
-          
+
         </div>
       </div>
+      @endif
       @endforeach
     </div>
 </div>
