@@ -11,7 +11,8 @@ class PagesController extends Controller
 {
   public function home()
   {
-    return view('home');
+    $categories = Category::all();
+    return view('home', compact('categories'));
   }
 
   public function category($category)

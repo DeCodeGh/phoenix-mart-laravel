@@ -4,7 +4,7 @@
         <div class="flex flex-wrap">
             <div class="md:w-4/6 flex flex-wrap px-4 py-6 -mx-2">
                 <div class="md:w-2/3">
-                    <img src="https://images.unsplash.com/photo-1497339100210-9e87df79c218?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=600&q=60" alt="">
+                <img src="<?php echo asset("storage/$product->featured_img")?>" alt="" class="w-full h-auto">
                 </div>
                 <div class="flex-1  inline-flex md:block px-2 py-2">
                     <div class="mb-2 px-2">

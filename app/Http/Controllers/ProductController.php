@@ -6,7 +6,8 @@ use App\Models\Product;
 use App\Models\Category;
 use App\models\SubCategory;
 use Illuminate\Http\Request;
-
+use Storage;
+use File;
 class ProductController extends Controller
 {
   /**
@@ -45,6 +46,12 @@ class ProductController extends Controller
     $product->id = $request->input('id');
     $product->name = $request->input('name');
     $product->category_id = $request->get('category_id');
+        if($request->hasFile('featured_img')):
+       $image =  $request->file('featured_img');
+       $ext = $image->getClientOriginalExtension();
+      $path = request()->file('featured_img')->storeAs('img',$product->name.'-'.$product->id.'.'. $ext);
+      $product->featured_img = $path;
+    endif;
     $category = Category::where('id', $product->category_id)->first();
 
     $product->sub_category = $request->get('sub_category_name');
@@ -64,9 +71,9 @@ class ProductController extends Controller
    * @param  int  $id
    * @return \Illuminate\Http\Response
    */
-  public function show(Product $product)
+  public function show($product)
   {
-    $product = Product::find($product)->first();
+    $product = Product::where('id',$product)->first();
 
     return view('product', compact('product'));
   }
@@ -77,9 +84,9 @@ class ProductController extends Controller
    * @param  int  $id
    * @return \Illuminate\Http\Response
    */
-  public function edit(Product $product, Category $categories)
+  public function edit($product, Category $categories)
   {
-    $product =  Product::find($product)->first();
+     $product = Product::where('id',$product)->first();
     $subcategories = SubCategory::all();
 
     $categories = Category::all();
@@ -103,7 +110,6 @@ class ProductController extends Controller
     $category = Category::where('id', $product->category_id)->first();
     $product->category = $category->name;
     $product->sub_category = $request->get('sub_category_name');
-
     $product->price = $request->get('price');
     $product->stock = $request->get('stock');
     $product->in_stock = $request->get('in_stock');

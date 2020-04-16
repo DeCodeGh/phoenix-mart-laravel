@@ -1,7 +1,7 @@
 @extends('templates.dashboard')
 @section('dashboard-content')
 <div class="flex justify-center py-10">
-  <form action="{{route('product.store')}}" method="post" class="">
+  <form action="{{route('product.store')}}" method="post" class="" enctype="multipart/form-data">
     @csrf
     <h3 class="text-3xl capitalize w-full">create a product</h3>
         <div>
@@ -9,6 +9,12 @@
             <label class="block">ID</label>
             <input type="text" name="id" id="" class="mt-4" placeholder="i.e 1 numbers only">
           </div>
+
+           <div class="w-full mt-4">
+            <label class="block">Featured Image</label>
+            <input type="file" name="featured_img" id="" class="mt-4" placeholder="product name">
+          </div>
+
            <div class="w-full mt-4">
             <label class="block">Name</label>
             <input type="text" name="name" id="" class="mt-4" placeholder="product name">

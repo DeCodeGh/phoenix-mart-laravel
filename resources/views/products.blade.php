@@ -32,7 +32,7 @@
               @forelse($products as $product)
 
                       <div class="border border-black">
-                              <img src="https://images.unsplash.com/photo-1541717782351-e9acfdc4f0ab?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60" alt="" class=" mb-4">
+                              <img src="<?php echo asset("storage/$product->featured_img")?>" alt="" class="w-64 h-auto mb-4">
 
                       <div class="px-2 text-3xl font-extrabold"> 
                         <span>{{$product->name}}</span>
