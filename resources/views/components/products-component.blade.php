@@ -3,14 +3,16 @@
 <div class="border border-black">
 <a href="{{route('product.view',$product->id)}}">
 
-      <img src="<?php echo asset('storage/' . $product->featured_img) ?>" alt="" class="w-full object-contain w-full h-64">
+    <div class="flex-shrink-0">
+        <img src="<?php echo asset('storage/' . $product->featured_img) ?>" alt="" class="w-full object-cover w-full h-64">
+    </div>
 
     <div class="px-2 text-3xl font-extrabold">
       <span>{{$product->name}}</span>
     </div>
 
-    <div>
-      <span class="ml-4 px-3 py-2 bg-black rounded-md text-sm font-medium leading-5 text-gray-300 hover:text-white hover:bg-gray-700 focus:outline-none focus:text-white focus:bg-gray-700 transition duration-150 ease-in-out"
+    <div class="px-2 text-3xl font-extrabold">
+      <span class="px-2 py-2 bg-black rounded-md text-sm font-medium leading-5 text-gray-300 hover:text-white hover:bg-gray-700 focus:outline-none focus:text-white focus:bg-gray-700 transition duration-150 ease-in-out"
       >{{$product->category}}</span>
     </div>
     <div class="md:flex justify-center py-4 ">

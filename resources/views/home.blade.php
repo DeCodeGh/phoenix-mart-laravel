@@ -33,7 +33,9 @@ background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/s
         @if($loop->index < 6 )
         <div>
       <a class="" href="{{route('category',$category->name)}}">
-        <img src="https://images.unsplash.com/photo-1416339698674-4f118dd3388b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60" alt="" class="mt-4 mb-4 object-contain w-full h-64">
+       <div class="flex-shrink-0">
+          <img src="https://images.unsplash.com/photo-1416339698674-4f118dd3388b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60" alt="" class="mt-4 mb-4 object-cover w-full h-64">
+       </div>
         <div class="md:flex justify-center items-center text-center py-4">
          <div>
             <a href="{{route('category',$category->name)}}" class="border-2 block text-center antialiased border-white bg-black text-white hover:bg-white hover:border-black hover:text-black w-48 px-4 py-2 ml-2 mr-2 font-bold text-xl" >
