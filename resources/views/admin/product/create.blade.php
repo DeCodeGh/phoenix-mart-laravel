@@ -12,8 +12,20 @@
 
            <div class="w-full mt-4">
             <label class="block">Featured Image</label>
-            <input type="file" name="featured_img" id="" class="mt-4" placeholder="product name">
+            <input type="file" name="featured_img" id="" class="mt-4" placeholder="feature img">
           </div>
+
+          <div class="w-full mt-4">
+            <label class="block">Variation Image #1</label>
+            <input type="file" name="vari_img_one" id="" class="mt-4" placeholder="variation img 1">
+          </div>
+
+          <div class="w-full mt-4">
+            <label class="block">Variation Image #2</label>
+            <input type="file" name="vari_img_two" id="" class="mt-4" placeholder="variation img 2">
+          </div>
+
+
 
            <div class="w-full mt-4">
             <label class="block">Name</label>
